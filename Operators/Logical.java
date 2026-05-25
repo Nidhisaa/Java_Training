@@ -1,11 +1,10 @@
 public class Logical {
     public static void main(String[] args) {
 
-        boolean x = true;
-        boolean y = false;
+        boolean R = true;
+        int id = 10;
 
-        System.out.println("x && y = " + (x && y));
-        System.out.println("x || y = " + (x || y));
-        System.out.println("!x = " + (!x));
+        System.out.println("R = " + R);
+        System.out.println("id = " + id);
     }
 }
