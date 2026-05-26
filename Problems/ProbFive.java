@@ -1,6 +1,4 @@
 
-package ControlflowStmt;
-
 import java.util.*;
 public class ProbFive {
     public static void main(String args[]){
