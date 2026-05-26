@@ -20,7 +20,7 @@ public class ProbThree {
             return;
         }
 
-        // Numeric-only palindrome check for 4-digit number abcd: check a==d and b==c
+        // Check whether the 4-digit number is a palindrome without using strings or functions
         int n = Math.abs(num);
         int a = n / 1000;
         int b = (n / 100) % 10;
