@@ -20,8 +20,13 @@ public class ProbThree {
             return;
         }
 
-        String s = Integer.toString(Math.abs(num));
-        boolean palindrome = s.equals(new StringBuilder(s).reverse().toString());
+        // Numeric-only palindrome check for 4-digit number abcd: check a==d and b==c
+        int n = Math.abs(num);
+        int a = n / 1000;
+        int b = (n / 100) % 10;
+        int c = (n / 10) % 10;
+        int d = n % 10;
+        boolean palindrome = (a == d) && (b == c);
 
         if (palindrome) {
             System.out.println("Safe Unlocked!");
@@ -31,7 +36,6 @@ public class ProbThree {
 
         sc.close();
     }
-
-    }
+}
 
 
