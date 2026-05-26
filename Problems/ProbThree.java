@@ -4,7 +4,7 @@ public class ProbThree {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a number (0-9999): ");
+        System.out.print("Enter a 4-digit number (1000-9999): ");
         int num;
         if (sc.hasNextInt()) {
             num = sc.nextInt();
@@ -14,8 +14,14 @@ public class ProbThree {
             return;
         }
 
-            String s = Integer.toString(Math.abs(num));
-            boolean palindrome = s.equals(new StringBuilder(s).reverse().toString());
+        if (num < 1000 || num > 9999) {
+            System.out.println("Invalid input");
+            sc.close();
+            return;
+        }
+
+        String s = Integer.toString(Math.abs(num));
+        boolean palindrome = s.equals(new StringBuilder(s).reverse().toString());
 
         if (palindrome) {
             System.out.println("Safe Unlocked!");
