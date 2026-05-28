@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class DevilsDiamind {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-         int n = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
 
         int left = 1;
         int right = n * n + 1; 
@@ -27,9 +27,12 @@ public class DevilsDiamind {
              right = right - (2 * (n - i)); 
             System.out.println();
         }
-        sc.close();
     }
+   
 }
+}
+    
+
 
 //#region PATTERN STRATEGY DOCUMENTATION
 /* 

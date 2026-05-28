@@ -2,17 +2,21 @@ package String;
 
 
 public class string{
+    @SuppressWarnings("StringEquality")
     public static void main (String[] args) {
         String s_1 = "Hello";
+        @SuppressWarnings("RedundantStringConstructorCall")
         String s_2 = new String("Hello");
         // stringName.length()
+        @SuppressWarnings("unused")
         int length = s_1.length();
         //access 
         // stringName.charAt(index);
         char c = s_1.charAt(3);
         System.out.print(c);
     // stringName.toCharArray();
-        char []convert = s_1.toCharArray();
+        char[] convert = s_1.toCharArray();
+        System.out.print(convert);
     // StringName.toUpperCase()
     // StringName.toLowerCase();
     // StringName.indexOf(character) - if present returns  first occurence index,else return -1
