@@ -1,4 +1,4 @@
-package Problems;
+package Problems.StarProb;
 import java.util.Scanner;
 public class HallowStar_pr {
     
