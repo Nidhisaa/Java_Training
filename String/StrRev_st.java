@@ -1,5 +1,6 @@
+package String;
 import java.util.*;
-public class StrRev {
+public class StrRev_st {
    /* public static void main (String[] args) {
         String str = "Hello, World!";
         String reversedStr = reverseString(str);
