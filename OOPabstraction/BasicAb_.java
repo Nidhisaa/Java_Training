@@ -6,16 +6,17 @@ public class BasicAb_ {
         // Abstract method does not have a body and must be implemented by subclasses
 
         // Example of an abstract class
-        @SuppressWarnings("unused")
+       
         abstract class Music {
                        
+            @SuppressWarnings("unused")
             void play() {
                 System.out.println("Playing music");
             }
         }
 
         // Subclass that extends the abstract class
-        class Dog extends Animal {
+        class Dog extends Music {
             void sound() {
                 System.out.println("Dog barks");
             }
@@ -29,10 +30,6 @@ public class BasicAb_ {
       
     }
 
-    private static class Animal {
-
-        public Animal() {
-        }
-    }
+    
     
 }
