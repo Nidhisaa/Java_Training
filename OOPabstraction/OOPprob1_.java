@@ -29,6 +29,8 @@ public class OOPprob1_ {
 
         public BusTicket(int ticketNumber, String passengerName, String boardingPoint) {
             super(ticketNumber, passengerName);
+            // super is to access keyword in the parent cls 
+            // and to call the constructor of the parent class (Ticket) to initialize the common attributes (ticketNumber and passengerName).
             this.boardingPoint = boardingPoint;
         }
 
