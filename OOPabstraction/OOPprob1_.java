@@ -25,6 +25,7 @@ public class OOPprob1_ {
     }
 
     static class BusTicket extends Ticket {
+        @SuppressWarnings("FieldMayBeFinal")
         private String boardingPoint;
 
         public BusTicket(int ticketNumber, String passengerName, String boardingPoint) {
@@ -44,6 +45,7 @@ public class OOPprob1_ {
     }
 
     static class TrainTicket extends Ticket {
+        @SuppressWarnings("FieldMayBeFinal")
         private String coachType;
 
         public TrainTicket(int ticketNumber, String passengerName, String coachType) {
@@ -63,6 +65,7 @@ public class OOPprob1_ {
     }
 
     static class FlightTicket extends Ticket {
+        @SuppressWarnings("FieldMayBeFinal")
         private String flightClass;
 
         public FlightTicket(int ticketNumber, String passengerName, String flightClass) {
