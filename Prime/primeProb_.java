@@ -1,5 +1,6 @@
+package Prime;
 
-public class primeProb
+public class primeProb_
 {
    @SuppressWarnings("unused")
    int add(int a, int b){// parameters

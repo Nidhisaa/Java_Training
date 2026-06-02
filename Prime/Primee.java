@@ -1,5 +1,6 @@
+package Prime;
 import java.util.*;
-public class Prime {
+public class Primee {
     boolean isPrime(int number) {
         int count = 0;
         for (int i = 1; i <= number; i++) {
@@ -14,7 +15,7 @@ public class Prime {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        Prime prime = new Prime();
+        Primee prime = new Primee();
         if (prime.isPrime(n)) {
             System.out.println("Prime Number");
         } else {
