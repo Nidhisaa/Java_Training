@@ -56,6 +56,34 @@ class SLL{
         }
     }
 
+    void insertAtMiddle(int val){  // insert at middle
+        Node newNode = new Node();
+        newNode.data = val;
+        if(head == null){
+            head = newNode;
+        }else{
+            Node temp = head;
+            int n = countNodes();
+            for(int i=1;i<n/2;i++){
+                temp = temp.next;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+    }
+
+
+    private int countNodes() {
+        int count = 0;
+        Node temp = head;
+
+        while(temp != null){
+            count++;
+            temp = temp.next;
+        }
+
+        return count;
+    }
 
     void display(){
         Node temp = head;
@@ -94,6 +122,10 @@ public class SinglyLL {
         // Insert 30 at position 3
         s1.insertAtPosition(30, 3);
         System.out.print("Insert at Position: ");
+        s1.display();
+        // Insert at middle
+        s1.insertAtMiddle(25);
+        System.out.print("Insert at Middle: ");
         s1.display();
 
         System.out.print("After Insertions: ");
