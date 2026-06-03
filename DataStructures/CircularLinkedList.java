@@ -62,7 +62,9 @@ class CircularSinglyLinkedList{
             temp = temp.next;
         }
 
-        previous.next = head;
+        if(previous != null){
+            previous.next = head;
+        }
     }
 
     void deleteAtBegining(){
