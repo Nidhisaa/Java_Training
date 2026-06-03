@@ -1,0 +1,143 @@
+class QueueArray{
+    int front, rear;
+    int []queue;
+    
+    QueueArray(int size){
+        queue = new int[size];
+        front = rear = -1;
+    }
+    void enqueue(int data){
+        if(rear == queue.length - 1){
+            System.out.println("Queue overflow");
+        }
+        else{
+            if(front == -1){
+                front = 0;
+            }
+            
+            queue[++rear] = data;
+        }
+    }
+    
+    void dequeue(){
+        if(front == -1 || rear < front){
+            System.out.println("Queue underflow");
+        }
+        else{
+            System.out.println("Deleted element : "+queue[front]);
+            front--;
+        }
+    }
+    
+    int Dequeue(){
+        if(front == -1 || rear < front){
+            return -1;
+        }
+        else{
+            int deleted = queue[front];
+            front--;
+            return deleted;
+        }
+    }
+    
+    void peek(){
+        System.out.println("Peek element : " + queue[front]);
+    }
+    
+    void display(){
+        for(int i = front;i<=rear;i++){
+            System.out.print(queue[i]+" ");
+        }
+    }
+}
+
+public class Main{
+    public static void main (String[] args) {
+        QueueArray q = new QueueArray(5);
+        q.enqueue(10);
+        q.enqueue(20);
+        q.enqueue(30);
+        
+        
+        int deleted_value = q.dequeue();
+        
+        q.peek()
+    }
+}
+
+
+//=================================================================================================================
+
+package queue;
+class Node
+{
+    int data;
+    Node next;
+}
+
+class Queue
+{
+    Node front, rear;
+
+    Queue()
+    {
+        front = rear = null;
+    }
+    void enque(int data)
+    {
+        Node nn = new Node(data);
+        nn.data = data;
+        nn.next = null;
+
+        if(front==null)
+        {
+            front = rear = nn;
+        }
+        else
+        {
+            rear.next = nn;
+            rear = nn;
+        }
+    }
+
+    void display()
+    {
+        Node temp = front;
+        while(temp!=null)
+        {
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
+    int deque()
+    {
+        if(front==null) return -1;
+
+        Node t = front;
+
+        front = front.next;
+        t.next = null;
+
+        return t.data;
+
+    }
+}
+public class QueueList {
+    public static void main(String[] args) {
+        Queue q = new Queue();
+        q.enque(10);
+        q.enque(20);
+        q.enque(30);
+        q.enque(40);
+        q.enque(50);
+
+        q.display();
+
+        System.out.println("Dequed  value : " + q.deque());
+
+        q.display();
+    }
+
+}
