@@ -71,6 +71,21 @@ class SLL{
             temp.next = newNode;
         }
     }*/
+   /* void insertAtMiddle(int val){  // insert at middle
+        Node newNode = new Node();
+        newNode.data = val;
+        if(head == null){
+            head = newNode;
+        }else{
+            Node temp = head;
+            int n = countNodes();
+            for(int i=1;i<n/2;i++){
+                temp = temp.next;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+    }*/
 
 
          void insertAtMiddle(int val){  // insert at position
@@ -89,21 +104,13 @@ class SLL{
                 fast = fast.next.next;
             }
             newNode.next = slow;
-            prev.next = newNode;
+            if(prev == null){
+                head = newNode;
+            }else{
+                prev.next = newNode;
+            }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 // slow and fast pointer approach can also be used to find the middle element of the linked list.
 //  In this approach, we use two pointers, one slow and one fast.
 //  The slow pointer moves one step at a time, while the fast pointer moves two steps at a time. 
@@ -132,17 +139,10 @@ class SLL{
 
 
 
-    private int countNodes() {
-        int count = 0;
-        Node temp = head;
 
-        while(temp != null){
-            count++;
-            temp = temp.next;
-        }
 
-        return count;
-    }
+
+
 
     void display(){
         Node temp = head;
