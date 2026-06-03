@@ -1,0 +1,78 @@
+package DataStructures;
+
+public class StackLL {
+    
+}
+class Node{
+    int data;
+    Node next;
+}
+
+class StackList{
+    Node top;
+    
+    StackList(){
+        top = null;
+    }
+
+    void push(int value){
+        Node nn = new Node();
+        nn.data = value;
+        nn.next = null;
+
+        if(top==null)
+        {
+           top = nn;
+        }
+        else
+        {
+            nn.next = top;
+            top = nn;
+        }
+    }
+
+    int pop()
+    {
+        if(top == null){
+            return -1;
+        }
+        Node t = top;
+        int popped = t.data;
+        top = top.next;
+        t.next = null;
+
+        return popped;
+    }
+
+    void peek(){
+        System.out.println("Peek Element : " + top.data);
+    }
+    void display()
+    {
+        Node t = top;
+        while(t!=null)
+        {
+            System.out.print(t.data+" ");
+            t= t.next;
+        }
+        System.out.println();
+    }
+
+}
+
+public class Main {
+    public static void main(String[] args) {
+        StackList  st= new StackList();
+
+        st.push(10);
+        st.push(20);
+        st.push(30);
+        st.push(40);
+        st.display();
+
+        System.out.println("Popped value : "+st.pop());
+        st.display();
+        st.peek();
+
+    }
+}
