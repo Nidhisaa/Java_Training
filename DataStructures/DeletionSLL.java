@@ -1,10 +1,11 @@
 package DataStructures;
 
 class Nodes{
-    Node next;
+    Nodes next;
+    public int data;
 }
 class DeleteSLL{
-    Node head;
+    Nodes head;
 
     // while creating node head should be null
     DeleteSLL(){
@@ -13,14 +14,14 @@ class DeleteSLL{
 
 
     void insertAtEnd(int val){    //insert at end or last
-        Node newNode = new Node();
+        Nodes newNode = new Nodes();
         newNode.data = val;
         newNode.next = null;
 
         if(head == null){
             head = newNode;
         }else{
-            Node temp = head;
+            Nodes temp = head;
             while(temp.next!=null){
                 temp = temp.next;
             }
@@ -36,13 +37,11 @@ class DeleteSLL{
             head = null;
         }
         else{
-            Node temp = head;
-            Node prev = null;
-            while(temp.next != null){
-                prev = temp;
+            Nodes temp = head;
+            while(temp.next.next != null){
                 temp = temp.next;
             }
-             prev.next = null;
+            temp.next = null;
         }
     }
 
@@ -50,25 +49,39 @@ class DeleteSLL{
         if(head == null){
             System.out.println("List is Empty");
         }else{
-            Node temp = head;
+            Nodes temp = head;
             head = head.next;
             temp.next = null;
         }
     }
 
     void deleteAtPosition(int pos){    // Deletion at position
-        Node temp = head;
-        Node prev = null;
+        if(head == null){
+            System.out.println("List is Empty");
+            return;
+        }
+        if(pos <= 1){
+            deleteAtBegin();
+            return;
+        }
+        Nodes temp = head;
+        Nodes prev = null;
         for(int i=1; i<=pos-1; i++){
+            if(temp == null){
+                return;
+            }
             prev = temp;
             temp = temp.next;
+        }
+        if(prev == null || temp == null){
+            return;
         }
         prev.next = temp.next;
         temp.next = null;
     }
 
     void display(){    //To display the list
-        Node temp = head;
+        Nodes temp = head;
 
         while(temp != null){
             System.out.print(temp.data + " ");
