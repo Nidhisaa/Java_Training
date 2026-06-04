@@ -1,4 +1,4 @@
-package DataStructures;
+package DataStructures.LinkedList;
 
 public class QueueLL_ {
     static class Node {

@@ -1,4 +1,4 @@
-package DataStructures;
+package DataStructures.LinkedList;
 
 public class DoublyLL_ {
 
