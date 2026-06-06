@@ -1,18 +1,33 @@
 package Collections.Map;
+
 import java.util.HashMap;
 public class HashMap_ {
     public static void main(String[] args) {
-        HashMap<String, Integer> map = new HashMap<>();
-        map.put("a", 1);
-        map.put("b", 2);
-        map.put("c", 3);
-        map.put("d", 4);
-        map.put("e", 5);
-        map.put("f", 6);
-        map.put("g", 7);
-        map.put("g", 8);
-        map.put("i", 9);
-        map.put("j", 10);
-        System.out.println(map);
-    }    
+        // Map -> key -> value
+
+        HashMap<Integer, String> details = new HashMap<>();
+        details.put(1001, "Avis");
+        details.put(1002, "Bob");
+        details.put(1003, "Charlie");
+        details.put(1000, "Shiva");
+        System.out.println(details);
+
+        System.out.println(details.get(1002));
+
+        details.put(1003, "MKCE");
+        System.out.println(details);
+
+        System.out.println(details.getOrDefault(1007, "Hello World"));
+
+        details.put(1007, details.getOrDefault(1007, "Hello"));
+        System.out.println(details);
+
+        System.out.println(details.putIfAbsent(1007, "Hello Terv.."));
+
+        System.out.println(details.keySet());
+        System.out.println(details.values());
+
+        details.remove(1003);
+        System.out.println(details);
+    }
 }
