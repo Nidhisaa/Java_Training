@@ -14,7 +14,5 @@ public class HashMap_ {
         map.put("i", 9);
         map.put("j", 10);
         System.out.println(map);
-    }
-
-    
+    }    
 }
