@@ -1,4 +1,4 @@
-package Collections;
+package Collections.WCls;
 
 import java.util.*;
 // import java.util.List;
