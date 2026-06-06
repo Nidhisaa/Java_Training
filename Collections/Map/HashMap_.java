@@ -1,6 +1,7 @@
 package Collections.Map;
 
 import java.util.HashMap;
+import java.util.Map;
 public class HashMap_ {
     public static void main(String[] args) {
         // Map -> key -> value
@@ -29,5 +30,13 @@ public class HashMap_ {
 
         details.remove(1003);
         System.out.println(details);
+
+        System.out.println(details.containsKey(1000));
+        System.out.println(details.containsValue("Bob"));
+
+        // for accessing elements based on your choice the EntrySet will be used
+        for(Map.Entry<Integer, String> pair:details.entrySet()){
+            System.out.println(pair.getKey()+" : "+pair.getValue());
+        }
     }
 }
