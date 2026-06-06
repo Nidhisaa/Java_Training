@@ -21,8 +21,6 @@ public class j {
         // System.out.println(hs);
 
         System.out.println(hs.contains(1)); //dlt ana apro yethum irukathu so false
-
-        int size = hs.size();
         Iterator<Integer> iter = hs.iterator();
         //next(), hasNext()
 
