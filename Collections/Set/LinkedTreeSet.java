@@ -6,7 +6,7 @@ public class LinkedTreeSet {
 
 
 
-public class LinkedandTreeSet {
+public static class LinkedandTreeSet {
     public static void main(String[] args) {
         LinkedHashSet<String> movies = new LinkedHashSet<>();
         movies.add("96");
